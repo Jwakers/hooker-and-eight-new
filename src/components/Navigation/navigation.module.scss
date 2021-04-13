@@ -1,3 +1,11 @@
+@import "../../styles/variables";
+
 .nav {
-    color: red;
+    font-family: 'Crete Round', serif;
+    color: #fff;
+    background-color: $darkGrey;
+
+    &__item {
+        display: block;
+    }
 }
