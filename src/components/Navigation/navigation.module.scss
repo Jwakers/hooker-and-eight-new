@@ -1,11 +1,55 @@
 @import "../../styles/variables";
-
-.nav {
-    font-family: 'Crete Round', serif;
+@import "../../styles/mixins";
+@import "../../styles/functions";
+.Nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     color: #fff;
-    background-color: $darkGrey;
-
-    &__item {
-        display: block;
+    background: linear-gradient(180deg, $black 0%, $deepRed 100%);
+    width: 100%;
+    font-family: $secondaryFont;
+    clip-path: circle(70px at 100% 0%);
+    transition: clip-path 0.5s;
+    will-change: clip-path;
+    &___open {
+        clip-path: circle(80% at 50% 50%);
+        .Nav_menu_item {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+    &_menu {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        &_item {
+            position: relative;
+            bottom: 10px;
+            transition: 0.4s;
+            opacity: 0;
+            font-size: rem(24);
+            letter-spacing: rem(4);
+            display: block;
+            padding: rem(16) 0;
+            margin: rem(20) 0;
+            &:nth-child(1) {
+                transition-delay: 0.15s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.2s;
+            }
+            &:nth-child(3) {
+                transition-delay: 0.25s;
+            }
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+            &:nth-child(5) {
+                transition-delay: 0.35s;
+            }
+        }
     }
 }

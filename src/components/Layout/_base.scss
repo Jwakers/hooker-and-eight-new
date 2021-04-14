@@ -1,6 +1,7 @@
-@import "../../styles/variables";
-
-html, body {
+@import '../../styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&display=swap');
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -34,11 +35,4 @@ p {
 
 p a {
     color: $mainRed;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative
 }

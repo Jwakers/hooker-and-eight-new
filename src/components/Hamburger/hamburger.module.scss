@@ -1,0 +1,44 @@
+.Hamburger {
+    $width: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: $width;
+    height: 16px;
+    transition: 0.4s;
+    &___open {
+        top: 15%;
+        right: calc(50% - 10px);
+        .Hamburger_bar {
+            &___top {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+            &___middle {
+                top: 180%;
+                height: 1px;
+            }
+            &___bottom {
+                transform: rotate(-45deg);
+                top: 50%
+            }
+        }
+    }
+    &_bar {
+        position: absolute;
+        width: $width;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #fff;
+        transition: all 0.4s;
+        &___top {
+            top: 0;
+        }
+        &___middle {
+            top: 50%
+        }
+        &___bottom {
+            top: 100%
+        }
+    }
+}

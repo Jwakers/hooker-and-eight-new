@@ -1,3 +1,11 @@
+// Fonts
+$secondaryFont: 'Crete Round',
+serif;
+// Colors
+$black: #0c0c0c;
+$deepRed: #240000;
+$darkGrey: #212121;
+// Old vars
 $mainRed: #bd1b1b;
 $darkRed: #a31717;
 $lightRed: #db1f1f;
@@ -5,7 +13,6 @@ $darkBlue: #175fa3;
 $lightBlue: #1b6fbd;
 $darkGreen: #17a32c;
 $lightGreen: #1bbd32;
-$darkGrey: #212121;
 $lightGrey: #eee;
 $redGradient: linear-gradient(60deg, $lightRed, $darkRed);
 $blueGradient: linear-gradient(60deg, $lightBlue, $darkBlue);

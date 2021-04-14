@@ -1,11 +1,11 @@
 import React from 'react'
-import Navigation from "../Navigation"
 import "./_base.scss"
+import Header from '../Header'
 
 export default function Layout({ children }) {
     return (
         <main>
-            <Navigation />
+            <Header />
             {children}
         </main>
     )
