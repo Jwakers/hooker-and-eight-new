@@ -1,3 +1,4 @@
+@import './functions';
 @mixin atSmall {
     @media (min-width: 576px) {
         @content;
@@ -25,7 +26,8 @@
 @mixin container {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative
+    position: relative;
+    padding: rem(20);
 }
 
 @mixin center {

@@ -1,12 +1,18 @@
 // Fonts
+$primaryFont: 'Poppins',
+sans-serif;
 $secondaryFont: 'Crete Round',
 serif;
 // Colors
-$black: #0c0c0c;
+$black: #161616;
 $deepRed: #240000;
-$darkGrey: #212121;
+$darkGrey: #434343;
+$mainRed: #D34242;
+$orange: #E38F40;
+$cream: #f9eede;
+// Other
+$shadow: 0px 0px 6px rgba(0, 0, 0, .2);
 // Old vars
-$mainRed: #bd1b1b;
 $darkRed: #a31717;
 $lightRed: #db1f1f;
 $darkBlue: #175fa3;
@@ -18,5 +24,4 @@ $redGradient: linear-gradient(60deg, $lightRed, $darkRed);
 $blueGradient: linear-gradient(60deg, $lightBlue, $darkBlue);
 $greenGradient: linear-gradient(60deg, $lightGreen, $darkGreen);
 $rainbowGradient: linear-gradient(90deg, $mainRed, $lightGreen, $lightBlue);
-$shadow: 2px 2px 4px rgba(0, 0, 0, .4);
 $lightShadow: 2px 2px 4px rgba(0, 0, 0, 0.1);

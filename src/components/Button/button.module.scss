@@ -1,0 +1,27 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+.Button {
+    font-family: $primaryFont;
+    color: $darkGrey;
+    border: 1px solid $darkGrey;
+    background: none;
+    padding: rem(4) rem(10);
+    border-radius: 4px;
+    font-size: rem(16);
+    transition: 0.2s;
+    cursor: pointer;
+    appearance: none;
+    &:hover {
+        opacity: 0.6;
+    }
+    &___white {
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+.ButtonGroup {
+    >* {
+        margin: 0 rem(4);
+    }
+}

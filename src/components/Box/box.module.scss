@@ -1,0 +1,8 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+.Box {
+    padding: rem(20);
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: $shadow;
+}

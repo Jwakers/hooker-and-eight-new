@@ -1,3 +1,4 @@
+@import '../../styles/mixins';
 .Hamburger {
     $width: 20px;
     position: absolute;
@@ -24,6 +25,9 @@
             }
         }
     }
+    @include atMedium {
+        display: none;
+    }
     &_bar {
         position: absolute;
         width: $width;
@@ -41,4 +45,8 @@
             top: 100%
         }
     }
+}
+
+body:global(.using-mouse) :local(.Hamburger) {
+    outline: none;
 }

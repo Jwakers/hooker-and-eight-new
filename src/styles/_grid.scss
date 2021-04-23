@@ -1,0 +1,76 @@
+@import "./mixins";
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    @mixin grid-modifier($mod) {
+        @for $denominator from 1 to 13 {
+            @if ($mod) {
+                &--#{$mod}-#{$denominator} {
+                    grid-template-columns: repeat(#{$denominator}, 1fr);
+                }
+            }
+            @else {
+                &--#{$denominator} {
+                    grid-template-columns: repeat(#{$denominator}, 1fr);
+                }
+            }
+        }
+    }
+    @mixin grid-span($mod) {
+        @for $denominator from 1 to 13 {
+            @if ($mod) {
+                &__#{$mod}-#{$denominator} {
+                    grid-column: span #{$denominator};
+                }
+            }
+            @else {
+                &__#{$denominator} {
+                    grid-column: span #{$denominator};
+                }
+            }
+        }
+    }
+    &--gap {
+        grid-gap: 1rem;
+    }
+    &--gap-large {
+        grid-gap: 2.4rem;
+    }
+    &--align-center {
+        align-items: center;
+    }
+    @include grid-span(false);
+    @include grid-modifier(false);
+    @include atMedium {
+        @include grid-modifier('md');
+        @include grid-span('md');
+        &--start-md-3 {
+            grid-column-start: 3;
+            grid-column-end: none;
+        }
+    }
+    @include atLarge {
+        @include grid-modifier('lg');
+        @include grid-span('lg');
+    }
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.justify-self-md-end {
+    @include atMedium {
+        justify-self: end;
+    }
+}
+
+.flex {
+    display: flex;
+    &--center {
+        align-items: center;
+    }
+    &--spaced {
+        justify-content: space-evenly;
+    }
+}

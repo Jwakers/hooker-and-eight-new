@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/functions';
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&display=swap');
 html,
 body {
@@ -15,13 +16,17 @@ body {
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: $secondaryFont;
+    margin-top: 0;
+}
+
 img {
     max-width: 100%;
     display: block;
-}
-
-figure {
-    margin: 0;
 }
 
 a {
@@ -35,4 +40,8 @@ p {
 
 p a {
     color: $mainRed;
+}
+
+.section:not(:last-of-type) {
+    margin-bottom: rem(40);
 }

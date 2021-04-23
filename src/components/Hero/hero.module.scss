@@ -1,54 +1,69 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/functions';
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/functions";
 .Hero {
     position: relative;
     height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
     &_image {
         position: absolute;
+        width: 100%;
         height: 100%;
-        max-width: none;
-        z-index: -1;
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
+        object-fit: cover;
     }
     &_video {
         position: absolute;
-        top: 0;
-        max-height: 100vh;
-        height: 100vh;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s;
+        object-fit: cover;
+        pointer-events: none;
+        @include atMedium {
+            display: none;
+        }
+        &___loaded {
+            opacity: 1
+        }
     }
     &_overlay {
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 0.6;
-        background: linear-gradient(180deg, $deepRed 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, $deepRed 94%);
+        opacity: 0.8;
+        background: linear-gradient( 180deg, $black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 60%, $black 95%);
         mix-blend-mode: overlay;
     }
     &_content {
-        height: 100%;
-        width: 100%;
+        color: #fff;
+        text-shadow: 1px 1px 4px rgb(0 0 0 / 60%);
         &_center {
             @include center;
             width: 100%;
             text-align: center;
-            color: #fff;
             &_head {
-                font-size: rem(22)
+                font-size: rem(22);
             }
             &_sub {
                 font-family: $secondaryFont;
                 font-size: rem(32);
+            }
+            &_buttons {
+                margin: rem(10);
+            }
+        }
+        &_bottom {
+            position: absolute;
+            padding: rem(20);
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%) scale(1.2);
+            transition: 0.4s;
+            opacity: 0;
+            &___active {
+                bottom: 0;
+                transform: translateX(-50%) scale(1);
+                opacity: 0.6;
             }
         }
     }
