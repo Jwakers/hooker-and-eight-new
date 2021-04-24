@@ -4,6 +4,9 @@ import Hero from "../components/Hero"
 import ColorSection from "../components/ColorSection"
 import Box from "../components/Box"
 import AnimateOnScroll from "../components/AnimateOnScroll"
+import ReviewSection from "../components/ReviewSection"
+import AboutSection from "../components/AboutSection"
+import MapSection from "../components/MapSection"
 import "../styles/_grid.scss"
 
 export default function Home() {
@@ -45,7 +48,7 @@ export default function Home() {
                     </AnimateOnScroll>
                 </section>
                 <section className="section">
-                    <AnimateOnScroll>
+                    <AnimateOnScroll from="right">
                         <div className="grid">
                             <div className="grid__12 grid__md-10 grid--start-md-3">
                                 <Box>
@@ -79,6 +82,10 @@ export default function Home() {
                     </AnimateOnScroll>
                 </section>
             </ColorSection>
+            <ReviewSection />
+            <AboutSection />
+            <hr className="hr" />
+            <MapSection />
         </Layout>
     )
 }

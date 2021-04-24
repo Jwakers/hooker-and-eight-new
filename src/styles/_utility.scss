@@ -1,0 +1,13 @@
+@import "./mixins";
+.container {
+    @include container;
+}
+
+.section {
+    margin: rem(20) 0;
+}
+
+.hr {
+    width: 30%;
+    margin: rem(40) auto;
+}

@@ -3,30 +3,43 @@ import * as style from "./on-scroll.module.scss"
 
 export default function AnimateOnScroll({
     root = null,
-    rootMargin = "-80px 0px",
+    rootMargin = "-100px 0px",
     threshold = [0],
     children,
+    animateOut = true,
+    from = null,
 }) {
     const ref = useRef(null)
     const [entry, setEntry] = useState({})
-    const [modifier, setModifier] = useState(null)
+    const [isActive, setIsActive] = useState(null)
+
     const options = { root, rootMargin, threshold }
 
-    const observer = new IntersectionObserver(([entry]) => setEntry(entry), options)
+    const observer = new IntersectionObserver(
+        ([entry]) => setEntry(entry),
+        options
+    )
     useEffect(() => {
-        if (ref.current) {
-            observer.observe(ref.current)
+        if (ref.current) observer.observe(ref.current)
+    }, [ref])
+
+    useEffect(() => {
+        if (entry) {
             if (entry.isIntersecting) {
-                setModifier(style.OnScroll___visible)
-            } else {
-                setModifier(null)
+                setIsActive(true)
+            } else if (animateOut) {
+                setIsActive(null)
             }
         }
     }, [entry.isIntersecting])
 
-
     return (
-        <div className={`${style.OnScroll} ${modifier && modifier}`} ref={ref}>
+        <div
+            className={`${style.OnScroll} ${
+                from && style["OnScroll___" + from]
+            } ${isActive && style.OnScroll___visible}`}
+            ref={ref}
+        >
             {children}
         </div>
     )

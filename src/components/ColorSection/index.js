@@ -5,7 +5,7 @@ export default function ColorSection(props) {
     return (
         <section className={style.ColorSection}>
             <div className={style.ColorSection___pattern}></div>
-            <div className={style.ColorSection___container}>
+            <div className="container">
                 {props.children}
             </div>
         </section>

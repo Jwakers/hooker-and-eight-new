@@ -5,4 +5,16 @@
     &___visible {
         transform: translateX(0%);
     }
+    &___bottom {
+        transform: translateY(100%);
+        &.OnScroll___visible {
+            transform: translateY(0%);
+        }
+    }
+    &___right {
+        transform: translateX(100%);
+        &.OnScroll___visible {
+            transform: translateX(0%);
+        }
+    }
 }

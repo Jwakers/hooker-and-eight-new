@@ -13,7 +13,7 @@
         @include container;
     }
     &_image {
-        max-width: 200px;
+        max-width: 250px;
         padding: rem(10);
         margin-right: rem(20);
         @include atLarge {

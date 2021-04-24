@@ -8,25 +8,24 @@ export default function Hamburger(props) {
             props.onClick()
         }
     }
+    const sections = [
+        style.Hamburger_bar___top,
+        style.Hamburger_bar___middle,
+        style.Hamburger_bar___bottom
+    ]
     return (
         <div
             className={`${style.Hamburger} ${
-                props.open && style.Hamburger___open
+                props.open ? style.Hamburger___open : ''
             }`}
             onClick={props.onClick}
             onKeyPress={handleKeyPress}
             role="button"
             tabIndex="0"
         >
-            <div
-                className={`${style.Hamburger_bar} ${style.Hamburger_bar___top}`}
-            ></div>
-            <div
-                className={`${style.Hamburger_bar} ${style.Hamburger_bar___middle}`}
-            ></div>
-            <div
-                className={`${style.Hamburger_bar} ${style.Hamburger_bar___bottom}`}
-            ></div>
+            {sections.map((bar, i) => (
+                <div className={`${style.Hamburger_bar} ${bar}`} key={i}></div>
+            ))}
         </div>
     )
 }

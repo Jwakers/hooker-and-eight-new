@@ -1,0 +1,25 @@
+@import "../../styles/functions";
+@import "../../styles/mixins";
+.MapSection {
+    padding-bottom: rem(20);
+    margin: auto;
+    &_content {
+        text-align: center;
+        padding-bottom: rem(20);
+        @include atMedium {
+            text-align: left;
+            padding-bottom: 0;
+        }
+    }
+    &_list {
+        list-style-type: none;
+        padding: 0;
+    }
+    &_map {
+        width: 100%;
+        border: none;
+        @include atMedium {
+            height: 222px;
+        }
+    }
+}

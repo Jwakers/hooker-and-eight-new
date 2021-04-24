@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import * as style from "./hero.module.scss"
 
 import Button from "../Button"
-import ButtonGroup from "../Button/buttonGroup"
+import ButtonGroup from "../Button/ButtonGroup"
 
 export default function Hero() {
     const videoRef = useRef(null)
@@ -49,12 +49,12 @@ export default function Hero() {
                         at hooker &amp; eight
                         <ButtonGroup>
                             <a href="./">
-                                <Button modifier="Button___white">
+                                <Button modifier="white">
                                     menu &amp; order
                                 </Button>
                             </a>
                             <Link to="./find-us">
-                                <Button modifier="Button___white">find us</Button>
+                                <Button modifier="white">find us</Button>
                             </Link>
                         </ButtonGroup>
                     </div>

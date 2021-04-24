@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 import "./_base.scss"
+import "../../styles/_utility.scss"
 import Header from "../Header"
+import Footer from "../Footer"
 
 export default function Layout({ children }) {
     useEffect(() => {
@@ -18,6 +20,7 @@ export default function Layout({ children }) {
         <main>
             <Header />
             {children}
+            <Footer />
         </main>
     )
 }

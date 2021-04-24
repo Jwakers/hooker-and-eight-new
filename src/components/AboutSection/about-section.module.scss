@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/functions";
+.AboutSection {
+    display: block;
+    background-image: linear-gradient(180deg, $cream 20%, $mainRed 48%);
+    padding: rem(20) 0;
+    @include atMedium {
+        background-image: linear-gradient(90deg, #fff 50%, $mainRed 50%);
+    }
+    &_content {
+        color: #fff;
+        padding-left: rem(16);
+    }
+    &_image {
+        img {
+            margin: auto;
+        }
+    }
+}
