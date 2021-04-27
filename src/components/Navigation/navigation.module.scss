@@ -2,17 +2,18 @@
 @import "../../styles/mixins";
 @import "../../styles/functions";
 .Nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
-    color: #fff;
+    color: $mainRed;
     background: linear-gradient(180deg, $black 0%, $deepRed 100%);
     width: 100%;
     font-family: $secondaryFont;
     clip-path: circle(70px at 100% 0%);
     transition: clip-path 0.5s;
     will-change: clip-path;
+    z-index: 10;
     @include atMedium {
         position: relative;
         background: none;
@@ -22,6 +23,12 @@
     &___open {
         clip-path: circle(80% at 50% 50%);
     }
+    &___overlay {
+        color: #fff;
+        .Nav_menu_item:hover:after {
+            background-color: #fff;
+        }
+    }
     &_menu {
         position: absolute;
         top: 25%;
@@ -30,6 +37,7 @@
         @include atMedium {
             position: relative;
             display: flex;
+            align-items: center;
             top: unset;
         }
         &_item {
@@ -41,7 +49,7 @@
             font-size: rem(24);
             letter-spacing: rem(4);
             display: block;
-            padding: rem(16) 0;
+            padding: rem(16) rem(12);
             margin: rem(20) 0;
             &:after {
                 content: '';
@@ -51,7 +59,7 @@
                 transform: translateX(-50%);
                 width: 0;
                 height: 1px;
-                background-color: #fff;
+                background-color: $mainRed;
                 transition: 0.2s;
             }
             &:hover {

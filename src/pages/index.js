@@ -11,7 +11,7 @@ import "../styles/_grid.scss"
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout headerOverlay={true}>
             <Hero />
             <ColorSection>
                 <section className="section">

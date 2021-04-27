@@ -4,7 +4,7 @@ import "../../styles/_utility.scss"
 import Header from "../Header"
 import Footer from "../Footer"
 
-export default function Layout({ children }) {
+export default function Layout({ children, headerOverlay = false }) {
     useEffect(() => {
         const body = document.body
         body.addEventListener("mousedown", () => {
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
     })
     return (
         <main>
-            <Header />
+            <Header headerOverlay={headerOverlay} />
             {children}
             <Footer />
         </main>

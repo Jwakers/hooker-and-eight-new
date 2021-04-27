@@ -4,7 +4,7 @@ import Hamburger from "../Hamburger"
 
 import * as style from "./navigation.module.scss"
 
-export default function Navigation() {
+export default function Navigation({headerOverlay}) {
     const [navOpen, setNavOpen] = useState(false);
     const menuRef = useRef(null);
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function Navigation() {
     }
 
     const checkWindowWidth = () => {
-        return window.innerWidth > 768 ? setNavOpen(true) : setNavOpen(false);
+        return window.innerWidth >= 768 ? setNavOpen(true) : setNavOpen(false);
     }
 
     window.onresize = () => {
@@ -39,7 +39,7 @@ export default function Navigation() {
     }
 
     return (
-        <nav className={[style.Nav, navOpen ? style.Nav___open : ''].join(' ')}>
+        <nav className={`${style.Nav} ${navOpen ? style.Nav___open : ''} ${headerOverlay ? style.Nav___overlay : ''}`}>
             <div className={style.Nav_menu} ref={menuRef}>
                 {navOpen ? (
                     <>

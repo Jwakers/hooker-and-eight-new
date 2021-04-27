@@ -23,11 +23,13 @@
     }
 }
 
-@mixin container {
+@mixin container($setPosition: true) {
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
     padding: 0 rem(20);
+    @if ($setPosition) {
+        position: relative;
+    }
 }
 
 @mixin center {

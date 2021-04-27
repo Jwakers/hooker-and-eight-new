@@ -24,4 +24,10 @@
     >* {
         margin: 0 rem(4);
     }
+    >*:first-child {
+        margin-left: 0;
+    }
+    >*:last-child {
+        margin-right: 0;
+    }
 }

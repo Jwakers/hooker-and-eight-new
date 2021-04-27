@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="container">
                 <div className="grid">
                     <div className="grid__6 grid__md-3">
-                        <h3>useful links</h3>
+                        <h3>Useful links</h3>
                         <ul className={style.Footer_list}>
                             <li>
                                 <Link to="./">menu</Link>
@@ -32,7 +32,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="grid__6">
-                        <h3>address</h3>
+                        <h3>Address</h3>
                         <ul className={style.Footer_list}>
                             <li>Hooker &amp; Eight</li>
                             <li>49 Westgate Street</li>
@@ -43,8 +43,8 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="grid__6 grid__md-3">
-                        <h3>legal</h3>
+                    <div className="grid__12 grid__md-3">
+                        <h3>Legal</h3>
                         <ul className={style.Footer_list}>
                             <li>Registered in United Kingdom</li>
                             <li>Company Reg No: OC427241</li>
@@ -58,22 +58,22 @@ export default function Footer() {
                 </div>
                 <div className={style.Footer_social}>
                     <div className={style.Footer_social_icon}>
-                        <a href="https://www.facebook.com/Hooker-Eight-621016885063498/" target="_blank">
+                        <a href="https://www.facebook.com/Hooker-Eight-621016885063498/" target="_blank" rel="noreferrer">
                             <FaFacebook />
                         </a>
                     </div>
                     <div className={style.Footer_social_icon}>
-                        <a href="https://www.instagram.com/hookerandeight/?hl=en" target="_blank">
+                        <a href="https://www.instagram.com/hookerandeight/?hl=en" target="_blank" rel="noreferrer">
                             <FaInstagram />
                         </a>
                     </div>
                     <div className={style.Footer_social_icon}>
-                        <a href="https://twitter.com/hookerandeight?lang=en" target="_blank">
+                        <a href="https://twitter.com/hookerandeight?lang=en" target="_blank" rel="noreferrer">
                             <FaTwitter />
                         </a>
                     </div>
                     <div className={style.Footer_social_icon}>
-                        <a href="https://www.youtube.com/channel/UC4jSOgpk3Khq4SKqCqn-H8w" target="_blank">
+                        <a href="https://www.youtube.com/channel/UC4jSOgpk3Khq4SKqCqn-H8w" target="_blank" rel="noreferrer">
                             <FaYoutube />
                         </a>
                     </div>

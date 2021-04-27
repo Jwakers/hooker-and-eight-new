@@ -2,22 +2,21 @@
 @import '../../styles/mixins';
 @import '../../styles/functions';
 .Header {
-    position: absolute;
     width: 100%;
     display: flex;
-    padding: rem(10);
+    padding: rem(10) 0;
     z-index: 10;
     &_container {
         display: flex;
+        align-items: center;
         width: 100%;
-        @include container;
+        @include container(false);
     }
     &_image {
-        max-width: 250px;
-        padding: rem(10);
-        margin-right: rem(20);
-        @include atLarge {
-            max-width: 300px;
-        }
+        max-width: 220px;
+        padding: rem(10) 0;
+    }
+    &___overlay {
+        position: absolute;
     }
 }
