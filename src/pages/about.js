@@ -102,7 +102,7 @@ export default function About() {
                     working when you visit (quite often both if not out with the
                     Openside mobile pizza wagon) - we love chatting and getting
                     to know our supporters so please bend our ear when you come
-                    in!{" "}
+                    in!
                 </p>
                 <p>Much love</p>
                 <p>Dan &amp; Balzy</p>

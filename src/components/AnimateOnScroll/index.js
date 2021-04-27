@@ -14,11 +14,12 @@ export default function AnimateOnScroll({
     const [isActive, setIsActive] = useState(null)
 
     const options = { root, rootMargin, threshold }
-
-    const observer = new IntersectionObserver(
-        ([entry]) => setEntry(entry),
-        options
-    )
+    if (typeof window !== `undefined`) {
+        var observer = new window.IntersectionObserver(
+            ([entry]) => setEntry(entry),
+            options
+        )
+    }
     useEffect(() => {
         if (ref.current) observer.observe(ref.current)
     }, [ref])

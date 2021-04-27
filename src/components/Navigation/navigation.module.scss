@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     height: 100vh;
-    color: $mainRed;
+    color: #fff;
     background: linear-gradient(180deg, $black 0%, $deepRed 100%);
     width: 100%;
     font-family: $secondaryFont;
@@ -19,14 +19,21 @@
         background: none;
         clip-path: none;
         height: auto;
+        color: $mainRed;
     }
     &___open {
+        position: fixed;
         clip-path: circle(80% at 50% 50%);
+        @include atMedium {
+            position: relative;
+        }
     }
     &___overlay {
         color: #fff;
-        .Nav_menu_item:hover:after {
-            background-color: #fff;
+        .Nav_menu_item {
+            &:after {
+                background-color: #fff;
+            }
         }
     }
     &_menu {
@@ -59,12 +66,18 @@
                 transform: translateX(-50%);
                 width: 0;
                 height: 1px;
-                background-color: $mainRed;
                 transition: 0.2s;
+                background-color: #fff;
+                @include atMedium {
+                    background-color: $mainRed;
+                }
             }
-            &:hover {
+            &:hover, &___active {
                 &::after {
-                    width: 30%;
+                    width: 50px;
+                    @include atMedium {
+                        width: 30%;
+                    }
                 }
             }
             &___in {

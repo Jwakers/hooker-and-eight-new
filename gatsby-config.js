@@ -7,4 +7,5 @@
 module.exports = {
   /* Your site config here */
   plugins: [`gatsby-plugin-sass`],
+  pathPrefix: "/hooker-and-eight-new",
 }

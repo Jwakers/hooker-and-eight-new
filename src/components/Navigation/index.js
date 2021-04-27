@@ -34,8 +34,10 @@ export default function Navigation({headerOverlay}) {
         return window.innerWidth >= 768 ? setNavOpen(true) : setNavOpen(false);
     }
 
-    window.onresize = () => {
-        checkWindowWidth()
+    if (typeof window !== "undefined") {
+        window.onresize = () => {
+            checkWindowWidth()
+        }
     }
 
     return (
@@ -44,10 +46,10 @@ export default function Navigation({headerOverlay}) {
                 {navOpen ? (
                     <>
                         <Link to="." className={style.Nav_menu_item}>Menu &amp; Order</Link>
-                        <Link to="/about" className={style.Nav_menu_item}>About</Link>
-                        <Link to="/find-us" className={style.Nav_menu_item}>Find us</Link>
-                        <Link to="/gallery" className={style.Nav_menu_item}>Gallery</Link>
-                        <Link to="/openside" className={style.Nav_menu_item}>Openide</Link>
+                        <Link activeClassName={style.Nav_menu_item___active} to="/about" className={style.Nav_menu_item}>About</Link>
+                        <Link activeClassName={style.Nav_menu_item___active} to="/find-us" className={style.Nav_menu_item}>Find us</Link>
+                        <Link activeClassName={style.Nav_menu_item___active} to="/gallery" className={style.Nav_menu_item}>Gallery</Link>
+                        <Link activeClassName={style.Nav_menu_item___active} to="/openside" className={style.Nav_menu_item}>Openide</Link>
                     </>
                 ) : ''}
             </div>
