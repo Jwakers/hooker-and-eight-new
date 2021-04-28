@@ -58,6 +58,9 @@
             display: block;
             padding: rem(16) rem(12);
             margin: rem(20) 0;
+            @include atMedium {
+                bottom: 0;
+            }
             &:after {
                 content: '';
                 position: absolute;
@@ -72,7 +75,8 @@
                     background-color: $mainRed;
                 }
             }
-            &:hover, &___active {
+            &:hover,
+            &___active {
                 &::after {
                     width: 50px;
                     @include atMedium {

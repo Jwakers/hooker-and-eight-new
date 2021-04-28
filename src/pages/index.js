@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import ColorSection from "../components/ColorSection"
 import Box from "../components/Box"
@@ -11,11 +10,11 @@ import "../styles/_grid.scss"
 
 export default function Home() {
     return (
-        <Layout headerOverlay={true}>
+        <>
             <Hero />
             <ColorSection>
                 <section className="section">
-                    <AnimateOnScroll>
+                    <AnimateOnScroll animateOut={false}>
                         <div className="grid">
                             <div className="grid__12 grid__md-10">
                                 <Box>
@@ -48,7 +47,7 @@ export default function Home() {
                     </AnimateOnScroll>
                 </section>
                 <section className="section">
-                    <AnimateOnScroll from="right">
+                    <AnimateOnScroll from="right" animateOut={false}>
                         <div className="grid">
                             <div className="grid__12 grid__md-10 grid--start-md-3">
                                 <Box>
@@ -86,6 +85,6 @@ export default function Home() {
             <AboutSection />
             <hr className="hr" />
             <MapSection />
-        </Layout>
+        </>
     )
 }

@@ -16,7 +16,7 @@ export default function Header({ headerOverlay }) {
                 <Link to="/">
                     <img
                         className={style.Header_image}
-                        srcset={`https://res.cloudinary.com/drgquplia/image/upload/${imageParams}w_220/hooker-and-eight/brand/text-logo.png 1x, https://res.cloudinary.com/drgquplia/image/upload/${imageParams}w_440/hooker-and-eight/brand/text-logo.png 2x`}
+                        srcSet={`https://res.cloudinary.com/drgquplia/image/upload/${imageParams}w_220/hooker-and-eight/brand/text-logo.png 1x, https://res.cloudinary.com/drgquplia/image/upload/${imageParams}w_440/hooker-and-eight/brand/text-logo.png 2x`}
                         alt="Hooker and Eight logo"
                     />
                 </Link>

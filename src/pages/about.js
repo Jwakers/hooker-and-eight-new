@@ -1,9 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout"
 
 export default function About() {
     return (
-        <Layout>
             <div className="container">
                 <h1>About us</h1>
                 <img
@@ -108,6 +106,5 @@ export default function About() {
                 <p>Dan &amp; Balzy</p>
                 <p>Hooker &amp; Eight.</p>
             </div>
-        </Layout>
     )
 }

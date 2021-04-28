@@ -5,7 +5,9 @@
     position: relative;
     background: linear-gradient(113deg, $cream 45%, $mainRed 45%);
     overflow: hidden;
-    padding: rem(20) rem(20);
+    @include atMedium {
+        padding-bottom: rem(20);
+    }
     &::before {
         content: '';
         position: absolute;
