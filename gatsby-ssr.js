@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "./src/components/Layout"
 
 export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
     setPostBodyComponents([
@@ -10,6 +9,3 @@ export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
         ></script>,
     ])
 }
-export const wrapPageElement = ({element, props}) => (
-    <Layout {...props}>{element}</Layout>
-)

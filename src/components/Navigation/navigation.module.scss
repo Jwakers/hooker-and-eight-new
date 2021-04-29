@@ -58,6 +58,7 @@
             display: block;
             padding: rem(16) rem(12);
             margin: rem(20) 0;
+            cursor: pointer;
             @include atMedium {
                 bottom: 0;
             }

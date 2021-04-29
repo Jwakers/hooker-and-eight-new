@@ -1,4 +1,5 @@
 import React from "react"
+import MetaInfo from "../components/MetaInfo"
 import Hero from "../components/Hero"
 import ColorSection from "../components/ColorSection"
 import Box from "../components/Box"
@@ -11,6 +12,7 @@ import "../styles/_grid.scss"
 export default function Home() {
     return (
         <>
+            <MetaInfo title="Home" description="Gloucester's finest handmade pizza at Hooker &amp; Eight" />
             <Hero />
             <ColorSection>
                 <section className="section">

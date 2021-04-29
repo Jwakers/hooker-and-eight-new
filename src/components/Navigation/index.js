@@ -28,8 +28,8 @@ export default function Navigation({ headerOverlay }) {
             )
         }
     }, [navOpen])
-    const toggleMobileMenu = () => {
-        setNavOpen(!navOpen)
+    const toggleMobileMenu = (value) => {
+        setNavOpen(value !== undefined ? value : !navOpen)
     }
 
     const checkWindowWidth = () => {
@@ -50,11 +50,11 @@ export default function Navigation({ headerOverlay }) {
         >
             <div className={style.Nav_menu} ref={menuRef}>
                 <>
-                    <Link to="." className={style.Nav_menu_item}>
+                    <span className={style.Nav_menu_item} data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
                         Menu &amp; Order
-                    </Link>
+                    </span>
                     <Link
-                        onClick={toggleMobileMenu}
+                        onClick={() => toggleMobileMenu(false)}
                         activeClassName={style.Nav_menu_item___active}
                         to="/about"
                         className={style.Nav_menu_item}
@@ -62,7 +62,7 @@ export default function Navigation({ headerOverlay }) {
                         About
                     </Link>
                     <Link
-                        onClick={toggleMobileMenu}
+                        onClick={() => toggleMobileMenu(false)}
                         activeClassName={style.Nav_menu_item___active}
                         to="/find-us"
                         className={style.Nav_menu_item}
@@ -70,7 +70,7 @@ export default function Navigation({ headerOverlay }) {
                         Find us
                     </Link>
                     <Link
-                        onClick={toggleMobileMenu}
+                        onClick={() => toggleMobileMenu(false)}
                         activeClassName={style.Nav_menu_item___active}
                         to="/gallery"
                         className={style.Nav_menu_item}
@@ -78,7 +78,7 @@ export default function Navigation({ headerOverlay }) {
                         Gallery
                     </Link>
                     <Link
-                        onClick={toggleMobileMenu}
+                        onClick={() => toggleMobileMenu(false)}
                         activeClassName={style.Nav_menu_item___active}
                         to="/openside"
                         className={style.Nav_menu_item}

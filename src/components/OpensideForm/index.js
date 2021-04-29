@@ -58,7 +58,7 @@ export default class OpensideForm extends React.Component {
         if (this.state.submitted)
             return "Form submitted!"
         // Is final step
-        if (this.state.currentStep == Object.keys(this.state.steps).length)
+        if (this.state.currentStep === Object.keys(this.state.steps).length)
             return "Confirm and submit"
         // Form fields
         return this.renderFields()
@@ -113,7 +113,7 @@ export default class OpensideForm extends React.Component {
                 {!this.state.submitted && (
                     <div className={style.Form_buttons}>
                         {this.state.currentStep > 1 && (
-                            <div className={style.Form_buttons_left}>
+                            <div>
                                 <Button type="button" onClick={this.back}>
                                     Back
                                 </Button>

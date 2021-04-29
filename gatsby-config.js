@@ -6,6 +6,6 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-react-helmet`],
   pathPrefix: "/hooker-and-eight-new",
 }

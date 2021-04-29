@@ -1,8 +1,10 @@
 import React from "react"
+import MetaInfo from "../components/MetaInfo"
 
-export default function About() {
+export default function About({path}) {
     return (
             <div className="container">
+                <MetaInfo title="About us" description="How it all started at Hooker &amp; Eight" path={path} />
                 <h1>About us</h1>
                 <img
                     className="floating-image floating-image--left"
