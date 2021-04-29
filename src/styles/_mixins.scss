@@ -38,3 +38,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin center-x {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+}

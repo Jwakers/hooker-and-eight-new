@@ -1,30 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
+import OpensideForm from "../components/OpensideForm"
 
 export default function About() {
     const eArr = [
-        "o",
-        "p",
-        "e",
-        "n",
-        "s",
-        "i",
-        "d",
-        "e",
-        "p",
-        "i",
-        "z",
-        "z",
-        "a",
-        "@",
-        "g",
-        "m",
-        "a",
-        "i",
-        "l",
-        ".",
-        "c",
-        "o",
-        "m",
+        "open","side","pizza","@gmail",".com",
     ]
 
     return (
@@ -77,6 +56,7 @@ export default function About() {
             <p>We will see you at a party soon! </p>
             <p>Dan, Balz &amp; Ludz</p>
             <p>Openside Pizza</p>
+            <OpensideForm />
         </div>
     )
 }

@@ -17,7 +17,7 @@ export default function Layout({ children, path }) {
             }
         })
     })
-    const headerOverlay = path == "/" ? true : false;
+    const headerOverlay = path === "/" ? true : false;
     return (
         <main>
             <Header headerOverlay={headerOverlay} />

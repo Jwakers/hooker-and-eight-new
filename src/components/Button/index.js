@@ -3,9 +3,9 @@ import * as style from "./button.module.scss"
 
 export default function Button(props) {
     const buttonModifiers = () => {
-        if (props.modifier) {
-            return style[`Button___${props.modifier}`]
-        }
+        if (props.modifier) 
+            return style[`Button___${props.modifier}`];
+        return ''
     }
     return (
         <button
