@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 import * as style from "./hero.module.scss"
 
-import Button from "../Button"
-import ButtonGroup from "../Button/ButtonGroup"
+import Button from "../../Button"
+import ButtonGroup from "../../Button/ButtonGroup"
 
 export default function Hero() {
     const videoRef = useRef(null)
@@ -48,11 +48,11 @@ export default function Hero() {
                     <div className={style.Hero_content_center_sub}>
                         at hooker &amp; eight
                         <ButtonGroup>
-                            <a href="./">
+                            <span data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
                                 <Button modifier="white">
                                     menu &amp; order
                                 </Button>
-                            </a>
+                            </span>
                             <Link to="./find-us">
                                 <Button modifier="white">find us</Button>
                             </Link>

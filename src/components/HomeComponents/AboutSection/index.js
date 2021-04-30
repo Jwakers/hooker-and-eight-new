@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 import * as style from "./about-section.module.scss"
 
-import Button from "../Button"
+import Button from "../../Button"
 
 export default function AboutSection() {
     return (

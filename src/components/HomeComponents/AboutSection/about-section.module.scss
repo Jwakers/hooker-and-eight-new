@@ -1,6 +1,6 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
-@import "../../styles/functions";
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import "../../../styles/functions";
 .AboutSection {
     display: block;
     background-image: linear-gradient(180deg, $cream 20%, $mainRed 48%);

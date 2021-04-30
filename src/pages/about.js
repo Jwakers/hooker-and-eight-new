@@ -6,11 +6,13 @@ export default function About({path}) {
             <div className="container">
                 <MetaInfo title="About us" description="How it all started at Hooker &amp; Eight" path={path} />
                 <h1>About us</h1>
-                <img
-                    className="floating-image floating-image--left"
-                    src="https://res.cloudinary.com/drgquplia/image/upload/w_568/v1615644209/hooker-and-eight/pages/adam-eating-pizza.jpg"
-                    alt="Balzy"
-                />
+                <div className="floating-image floating-image--left">
+                    <img
+                        className="round-edge"
+                        src="https://res.cloudinary.com/drgquplia/image/upload/w_568/v1615644209/hooker-and-eight/pages/adam-eating-pizza.jpg"
+                        alt="Balzy"
+                    />
+                </div>
                 <p>
                     Dan &amp; Balzy &nbsp;welcome you with open arms to Hooker
                     &amp; Eight - Gloucester’s only independent sit-down pizza
@@ -48,11 +50,13 @@ export default function About({path}) {
                     problem was the site was the music shop SoundHouse and it
                     needed a lot of work to get ready.
                 </p>
-                <img
-                    className="floating-image floating-image--right"
-                    src="https://res.cloudinary.com/drgquplia/image/upload/w_568/v1615644209/hooker-and-eight/pages/dan-eating-pizza.jpg"
-                    alt="Dan"
-                />
+                <div className="floating-image floating-image--right">
+                    <img
+                        className="round-edge"
+                        src="https://res.cloudinary.com/drgquplia/image/upload/w_568/v1615644209/hooker-and-eight/pages/dan-eating-pizza.jpg"
+                        alt="Dan"
+                    />
+                </div>
                 <p>
                     99% of what you see in the restaurant has been-up cycled or
                     sourced second hand with most of the cosmetic work,

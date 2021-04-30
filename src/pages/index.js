@@ -1,12 +1,12 @@
 import React from "react"
 import MetaInfo from "../components/MetaInfo"
-import Hero from "../components/Hero"
-import ColorSection from "../components/ColorSection"
 import Box from "../components/Box"
+import Hero from "../components/HomeComponents/Hero"
+import ColorSection from "../components/HomeComponents/ColorSection"
 import AnimateOnScroll from "../components/AnimateOnScroll"
-import ReviewSection from "../components/ReviewSection"
-import AboutSection from "../components/AboutSection"
-import MapSection from "../components/MapSection"
+import ReviewSection from "../components/HomeComponents/ReviewSection"
+import AboutSection from "../components/HomeComponents/AboutSection"
+import MapSection from "../components/HomeComponents/MapSection"
 import "../styles/_grid.scss"
 
 export default function Home() {
@@ -38,7 +38,8 @@ export default function Home() {
                                         </div>
                                         <div className="grid__12 grid__md-6">
                                             <img
-                                                src="https://res.cloudinary.com/drgquplia/image/upload/v1615569532/hooker-and-eight/gallery/pizza-ready-for-the-oven.jpg"
+                                                className="round-edge"
+                                                srcSet="https://res.cloudinary.com/drgquplia/image/upload/w_455,h_235,c_fill/hooker-and-eight/gallery/pizza-ready-for-the-oven.jpg 1x, https://res.cloudinary.com/drgquplia/image/upload/w_910,h_470,c_fill/hooker-and-eight/gallery/pizza-ready-for-the-oven.jpg 2x"
                                                 alt="Pulling a pizza onto the pizza peel"
                                             />
                                         </div>
@@ -56,7 +57,8 @@ export default function Home() {
                                     <div className="grid grid--gap">
                                         <div className="grid__12 grid__md-6">
                                             <img
-                                                src="https://res.cloudinary.com/drgquplia/image/upload/v1615569532/hooker-and-eight/gallery/vegetable-ingredients.jpg"
+                                                className="round-edge"
+                                                srcSet="https://res.cloudinary.com/drgquplia/image/upload/w_455,h_208,c_fill/hooker-and-eight/gallery/vegetable-ingredients.jpg 1x, https://res.cloudinary.com/drgquplia/image/upload/w_910,h_416,c_fill/hooker-and-eight/gallery/vegetable-ingredients.jpg 2x"
                                                 alt="Assortment of pizza toppings"
                                             />
                                         </div>

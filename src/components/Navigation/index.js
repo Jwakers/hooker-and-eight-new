@@ -50,9 +50,9 @@ export default function Navigation({ headerOverlay }) {
         >
             <div className={style.Nav_menu} ref={menuRef}>
                 <>
-                    <span className={style.Nav_menu_item} data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
+                    <div className={style.Nav_menu_item} data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
                         Menu &amp; Order
-                    </span>
+                    </div>
                     <Link
                         onClick={() => toggleMobileMenu(false)}
                         activeClassName={style.Nav_menu_item___active}

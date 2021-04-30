@@ -1,6 +1,6 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
-@import "../../styles/functions";
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import "../../../styles/functions";
 .ColorSection {
     position: relative;
     background: linear-gradient(113deg, $cream 45%, $mainRed 45%);

@@ -1,11 +1,10 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-@import "../../styles/functions";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/functions";
 .ReviewSection {
     display: block;
     background-color: $cream;
     padding: rem(20) 0;
-
     &_box {
         @include atMedium {
             position: relative;

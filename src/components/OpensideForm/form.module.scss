@@ -19,6 +19,36 @@
             margin-left: auto;
         }
     }
+    &_success {
+        font-family: $secondaryFont;
+        color: $green;
+        font-size: rem(24);
+        text-align: center;
+        margin-bottom: rem(10);
+    }
+    &_table {
+        $padding: rem(4) rem(6);
+        border-collapse: collapse;
+        &_head {
+            text-align: left;
+            font-family: $secondaryFont;
+            border-bottom: 1px solid $grey;
+            th {
+                padding: $padding;
+            }
+        }
+        &_row {
+            &:nth-of-type(odd) {
+                background-color: rgba($mainRed, 0.1);
+            }
+            td {
+                padding: $padding;
+                &:first-of-type {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
     &_inputs {
         $padding: rem(8);
         max-width: 460px;

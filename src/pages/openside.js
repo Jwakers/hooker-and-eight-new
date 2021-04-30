@@ -3,8 +3,6 @@ import MetaInfo from "../components/MetaInfo"
 import OpensideForm from "../components/OpensideForm"
 
 export default function About({ path }) {
-    const eArr = ["open", "side", "pizza", "@gmail", ".com"]
-
     return (
         <div className="container">
             <MetaInfo

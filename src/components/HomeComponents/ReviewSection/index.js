@@ -1,9 +1,9 @@
 import React from "react"
 import * as style from "./review-section.module.scss"
 
-import Button from "../Button"
-import Box from "../Box"
-import AnimateOnScroll from "../AnimateOnScroll"
+import Button from "../../Button"
+import Box from "../../Box"
+import AnimateOnScroll from "../../AnimateOnScroll"
 
 export default function ReviewSection() {
     return (
