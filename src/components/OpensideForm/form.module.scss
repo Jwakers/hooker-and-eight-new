@@ -27,8 +27,13 @@
         margin-bottom: rem(10);
     }
     &_table {
+        width: 100%;
+        font-size: rem(12);
         $padding: rem(4) rem(6);
         border-collapse: collapse;
+        @include atMedium {
+            font-size: rem(16);
+        }
         &_head {
             text-align: left;
             font-family: $secondaryFont;
@@ -57,6 +62,13 @@
             position: relative;
             display: block;
         }
+        &_error {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            color: $mainRed;
+            font-size: rem(14);
+        }
         &_input {
             $this: &;
             $transitionSpeed: 200ms;
@@ -69,10 +81,6 @@
             appearance: none;
             border: solid 1px $lightGrey;
             transition: margin $transitionSpeed;
-            &___small {
-                max-width: rem(120);
-                text-transform: uppercase;
-            }
             &:focus {
                 border-color: $darkGrey;
             }
@@ -89,10 +97,10 @@
                 color: $grey;
                 text-transform: capitalize;
                 transition: top $transitionSpeed;
+                pointer-events: none;
             }
             &::placeholder {
                 opacity: 0;
-                color: red;
             }
         }
     }

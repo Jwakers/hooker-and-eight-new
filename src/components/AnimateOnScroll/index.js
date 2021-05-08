@@ -13,6 +13,7 @@ export default function AnimateOnScroll({
     const [entry, setEntry] = useState({})
     const [isActive, setIsActive] = useState(null)
     const options = { root, rootMargin, threshold }
+    
     if (typeof window !== `undefined`) {
         var observer = new window.IntersectionObserver(
             ([entry]) => setEntry(entry),

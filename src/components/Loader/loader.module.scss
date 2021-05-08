@@ -1,16 +1,26 @@
 @import "../../styles/variables";
 @import "../../styles/functions";
 .Loader {
+    $color: $mainRed;
+    $size: 18px;
+    $margin: 6px;
+    &___white {
+        $color: #fff
+    }
+    &___small {
+        $size: 10px;
+        $margin: 3px;
+    }
     text-align: center;
     &_item1,
     &_item2,
     &_item3 {
-        width: 18px;
-        height: 18px;
-        background-color: $mainRed;
+        width: $size;
+        height: $size;
+        background-color: $color;
         border-radius: 100%;
         display: inline-block;
-        margin: 6px;
+        margin: 0 $margin;
         animation: bouncedelay 1.4s infinite ease-in-out both;
         animation-delay: 0s;
         will-change: transform;
