@@ -50,11 +50,11 @@ export default function Hero() {
                         <ButtonGroup>
                             <span data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
                                 <Button modifier="white">
-                                    menu &amp; order
+                                    Menu &amp; order
                                 </Button>
                             </span>
                             <Link to="./find-us">
-                                <Button modifier="white">find us</Button>
+                                <Button modifier="white">Find us</Button>
                             </Link>
                         </ButtonGroup>
                     </div>

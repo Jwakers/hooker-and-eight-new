@@ -29,6 +29,9 @@ export default function Footer() {
                             <li>
                                 <Link to="/openside">openside</Link>
                             </li>
+                            <li>
+                                <Link to="/privacy">privacy</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="grid__6">

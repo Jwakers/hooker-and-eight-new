@@ -87,7 +87,7 @@ export default function Navigation({ headerOverlay }) {
                     </Link>
                 </>
             </div>
-            <Hamburger onClick={toggleMobileMenu} open={navOpen} />
+            <Hamburger onClick={() => toggleMobileMenu()} open={navOpen} />
         </nav>
     )
 }

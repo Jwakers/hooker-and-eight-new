@@ -26,32 +26,15 @@
         text-align: center;
         margin-bottom: rem(10);
     }
-    &_table {
-        width: 100%;
-        font-size: rem(12);
-        $padding: rem(4) rem(6);
-        border-collapse: collapse;
-        @include atMedium {
-            font-size: rem(16);
-        }
-        &_head {
-            text-align: left;
-            font-family: $secondaryFont;
-            border-bottom: 1px solid $grey;
-            th {
-                padding: $padding;
-            }
-        }
-        &_row {
-            &:nth-of-type(odd) {
-                background-color: rgba($mainRed, 0.1);
-            }
-            td {
-                padding: $padding;
-                &:first-of-type {
-                    text-transform: capitalize;
-                }
-            }
+    &_message {
+        padding-bottom: rem(30);
+    }
+    &_errors {
+        ul {
+            margin: 0;
+            padding: rem(10) 0;
+            list-style: none;
+            color: $mainRed;
         }
     }
     &_inputs {
@@ -102,6 +85,10 @@
             &::placeholder {
                 opacity: 0;
             }
+        }
+        &_checkbox {
+            display: inline-block;
+            margin-bottom: rem(20);
         }
     }
 }

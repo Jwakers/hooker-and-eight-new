@@ -17,7 +17,7 @@ export default function AboutSection() {
                         <p>Dan and Balz are childhood school friends who played local youth rugby together for many years. It was one cold Christmas night at the Old Elm in Churchdown in 2014 where a very important was asked….”Why isn’t there a proper deece pizza place in Gloucester (and other than the pubs) why ‘ent there deece places to go to before the rugby!!”</p>
                         <p>It was one that couldn’t be answered for a few years and almost remained a drunken pipe-dream...</p>
                         <Link to="/about">
-                            <Button modifier="white">read the whole story</Button>
+                            <Button modifier="white">Read the whole story</Button>
                         </Link>
                     </div>
                 </div>

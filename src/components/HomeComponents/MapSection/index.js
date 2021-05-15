@@ -22,11 +22,11 @@ export default function MapSection() {
                             </ul>
                             <ButtonGroup>
                                 <Link to="/about">
-                                    <Button>contact us</Button>
+                                    <Button>Contact us</Button>
                                 </Link>
-                                <a href="./">
-                                    <Button>order</Button>
-                                </a>
+                                <span data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f">
+                                    <Button>Order</Button>
+                                </span>
                             </ButtonGroup>
                         </div>
                     </div>
