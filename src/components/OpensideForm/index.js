@@ -1,5 +1,4 @@
 import React from "react"
-import { GraphQLClient, gql } from "graphql-request"
 import { Formik, useField, Form } from "formik"
 import * as Yup from "yup"
 import * as style from "./form.module.scss"
@@ -159,47 +158,13 @@ export default class OpensideForm extends React.Component {
                     privacyPolicy: Yup.boolean().oneOf([true], "You must agree to our privacy policy").required("You must agree to our privacy policy")
                 })}
                 onSubmit={async (values, { setSubmitting, resetForm }) => {
-                    const mutation = gql`
-                        mutation createOpensideBooking(
-                            $name: String!
-                            $email: String!
-                            $phone: String!
-                            $address: String!
-                            $dateOfEvent: Date!
-                            $typeOfEvent: String!
-                            $numberOfGuests: Int!
-                            $eventAddress: String!
-                            $privacyPolicy: Boolean!
-                        ) {
-                            createOpensideBooking(
-                                data: {
-                                    name: $name
-                                    email: $email
-                                    phone: $phone
-                                    address: $address
-                                    dateOfEvent: $dateOfEvent
-                                    typeOfEvent: $typeOfEvent
-                                    numberOfGuests: $numberOfGuests
-                                    eventAddress: $eventAddress
-                                    privacyPolicy: $privacyPolicy
-                                }
-                            ) {
-                                id
-                            }
-                        }
-                    `
-                    // const graphcms = new GraphQLClient(
-                    //     process.env.GATSBY_GRAPHCMS_ENDPOINT,
-                    //     {
-                    //         headers: {
-                    //             authorization: `Bearer ${process.env.GATSBY_GRAPHCMS_TOKEN}`,
-                    //         },
-                    //     }
-                    // )
-                    const graphcms = false
+                    
                     try {
-                        console.log(values)
-                        await graphcms.request(mutation, values)
+                        const data = await fetch('/.netlify/functions/openside-form', {
+                            method: 'POST',
+                            body: JSON.stringify(values)
+                        })
+                        console.log({data})
                         setSubmitting(false)
                         resetForm()
                         this.setState({ currentStep: 1, submitted: true })
