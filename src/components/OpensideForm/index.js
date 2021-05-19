@@ -86,6 +86,21 @@ export default class OpensideForm extends React.Component {
             [fieldName]: e.target.value,
         })
     }
+    handleSubmit = async (values, setSubmitting, resetForm) => {
+        try {
+            const response = await fetch('/.netlify/functions/openside-form', {
+                method: 'POST',
+                body: JSON.stringify(values)
+            })
+            const data = await response.json()
+            setSubmitting(false)
+            resetForm()
+            this.setState({ currentStep: 1, submitted: true })
+        } catch (err) {
+            console.log({ err })
+            this.setState({ error: true })
+        }
+    }
     next = e => {
         e.preventDefault()
         this.setState(prev => ({
@@ -157,22 +172,7 @@ export default class OpensideForm extends React.Component {
                     ),
                     privacyPolicy: Yup.boolean().oneOf([true], "You must agree to our privacy policy").required("You must agree to our privacy policy")
                 })}
-                onSubmit={async (values, { setSubmitting, resetForm }) => {
-                    
-                    try {
-                        const data = await fetch('/.netlify/functions/openside-form', {
-                            method: 'POST',
-                            body: JSON.stringify(values)
-                        })
-                        console.log({data})
-                        setSubmitting(false)
-                        resetForm()
-                        this.setState({ currentStep: 1, submitted: true })
-                    } catch (err) {
-                        console.log({ err })
-                        this.setState({ error: true })
-                    }
-                }}
+                onSubmit={(values, { setSubmitting, resetForm }) => this.handleSubmit(values, setSubmitting, resetForm)}
             >
                 {props => (
                     <Form className={style.Form}>
