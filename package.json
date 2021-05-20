@@ -27,7 +27,6 @@
         "gatsby-plugin-sass": "^4.2.0",
         "gatsby-source-graphcms": "^2.5.2",
         "gatsby-source-graphql": "^3.4.0",
-        "gh-pages": "^3.1.0",
         "graphql-request": "^3.4.0",
         "netlify-cli": "^3.29.15",
         "react": "^17.0.1",
