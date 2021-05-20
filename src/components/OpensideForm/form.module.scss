@@ -15,6 +15,7 @@
     }
     &_buttons {
         display: flex;
+        margin-top: rem(20);
         &_right {
             margin-left: auto;
         }
@@ -25,9 +26,6 @@
         font-size: rem(24);
         text-align: center;
         margin-bottom: rem(10);
-    }
-    &_message {
-        padding-bottom: rem(30);
     }
     &_errors {
         ul {
@@ -47,10 +45,16 @@
         }
         &_error {
             position: absolute;
-            top: -20px;
-            right: 10px;
+            bottom: -20px;
+            left: 10px;
             color: $mainRed;
             font-size: rem(14);
+            @include atMedium {
+                top: -20px;
+                bottom: auto;
+                right: 10px;
+                left: auto;
+            }
         }
         &_input {
             $this: &;
@@ -74,6 +78,12 @@
                     top: -15px
                 }
             }
+            &___error {
+                margin-bottom: rem(44);
+                @include atMedium {
+                    margin-bottom: rem(20);
+                }
+            }
             &_placeholder {
                 padding-left: $padding;
                 @include center-x;
@@ -88,7 +98,6 @@
         }
         &_checkbox {
             display: inline-block;
-            margin-bottom: rem(20);
         }
     }
 }

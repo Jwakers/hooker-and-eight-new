@@ -8,15 +8,16 @@ import Loader from "../Loader"
 
 const TextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props)
+    const errorBool = meta.touched && meta.error
     return (
         <>
             <label className={style.Form_inputs_label} htmlFor={props.name}>
                 <input
-                    className={style.Form_inputs_input}
+                    className={`${style.Form_inputs_input} ${errorBool ? style.Form_inputs_input___error : ''}`}
                     {...field}
                     {...props}
                 />
-                {meta.touched && meta.error && (
+                {errorBool && (
                     <div className={style.Form_inputs_error}>{meta.error}</div>
                 )}
                 <span className={style.Form_inputs_input_placeholder}>
@@ -29,15 +30,17 @@ const TextInput = ({ label, ...props }) => {
 
 const TextArea = ({ label, ...props }) => {
     const [field, meta] = useField(props)
+    const errorBool = meta.touched && meta.error
+
     return (
         <>
             <label className={style.Form_inputs_label}>
                 <textarea
-                    className={style.Form_inputs_input}
+                    className={`${style.Form_inputs_input} ${errorBool ? style.Form_inputs_input___error : ''}`}
                     {...field}
                     {...props}
                 />
-                {meta.touched && meta.error && (
+                {errorBool && (
                     <div className={style.Form_inputs_error}>{meta.error}</div>
                 )}
                 <span className={style.Form_inputs_input_placeholder}>
@@ -92,7 +95,7 @@ export default class OpensideForm extends React.Component {
                 body: JSON.stringify(values)
             })
             const data = await response.json()
-            if (data.error)
+            if (data.error || data.errors || data.status == 400)
                 throw new Error(data.errors[0].message)
             setSubmitting(false)
             resetForm()
@@ -136,14 +139,15 @@ export default class OpensideForm extends React.Component {
         return (
             <Formik
                 initialValues={{
-                    name: "Jack",
-                    email: "jack@test.com",
-                    phone: "01452 331 809",
-                    address: "Test address",
-                    dateOfEvent: "2022-12-12",
-                    typeOfEvent: "Festival",
-                    numberOfGuests: 42069,
-                    eventAddress: "Event address, at downtown",
+                    name: "",
+                    email: "",
+                    phone: "",
+                    address: "",
+                    dateOfEvent: "",
+                    typeOfEvent: "",
+                    numberOfGuests: "",
+                    eventAddress: "",
+                    privacyPolicy: false
                 }}
                 validationSchema={Yup.object({
                     name: Yup.string().required("Name is a required field"),
@@ -166,8 +170,7 @@ export default class OpensideForm extends React.Component {
                         "Type of event is a required field"
                     ),
                     numberOfGuests: Yup.number()
-                        .required("Number of guests is a required field")
-                        .min(50, "There is a minimum of 50 guests"),
+                        .required("Number of guests is a required field"),
                     eventAddress: Yup.string().required(
                         "Event address is a required field"
                     ),
