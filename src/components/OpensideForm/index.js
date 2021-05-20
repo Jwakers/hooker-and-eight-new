@@ -5,7 +5,6 @@ import * as style from "./form.module.scss"
 
 import Button from "../Button"
 import Loader from "../Loader"
-import { Link } from "gatsby"
 
 const TextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props)
@@ -63,7 +62,7 @@ const Checkbox = ({ label, ...props }) => {
                 {meta.touched && meta.error && (
                     <div className={style.Form_inputs_error}>{meta.error}</div>
                 )}
-                <span>By checking this box you consent to our {<Link to="/privacy">privacy policy</Link>}.</span>
+                <span>By checking this box you consent to our {<a href="/privacy" target="_blank">privacy policy</a>}.</span>
             </label>
         </>
     )
@@ -93,11 +92,13 @@ export default class OpensideForm extends React.Component {
                 body: JSON.stringify(values)
             })
             const data = await response.json()
+            if (data.error)
+                throw new Error(data.errors[0].message)
             setSubmitting(false)
             resetForm()
             this.setState({ currentStep: 1, submitted: true })
         } catch (err) {
-            console.log({ err })
+            console.error(err)
             this.setState({ error: true })
         }
     }

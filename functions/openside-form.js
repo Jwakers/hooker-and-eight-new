@@ -1,6 +1,6 @@
 const { GraphQLClient, gql } = require("graphql-request")
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
     const mutation = gql`
         mutation createOpensideBooking(
             $name: String!
@@ -29,7 +29,8 @@ exports.handler = async (event, context) => {
                 id
             }
         }
-    `
+    `;
+    
     const graphcms = new GraphQLClient(process.env.GATSBY_GRAPHCMS_ENDPOINT, {
         headers: {
             authorization: `Bearer ${process.env.GATSBY_GRAPHCMS_TOKEN}`,
@@ -37,16 +38,17 @@ exports.handler = async (event, context) => {
     })
 
     try {
-        const data = await graphcms.request(mutation, JSON.parse(event.body))
+        const response = await graphcms.request(mutation, JSON.parse(event.body))
+        const data = response
         return {
             statusCode: 200,
             body: JSON.stringify(data, undefined, 2),
         }
     } catch(err) {
-        console.log(err)
+        console.log("ERROR", err)
         return {
-            statusCode: 400,
-            body: JSON.stringify(new Error(err), undefined, 2),
+            statusCode: err.response.status,
+            body: JSON.stringify(err.response)
         }
     }            
 }
