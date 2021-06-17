@@ -21,5 +21,8 @@
         @include atMedium {
             height: 222px;
         }
+        &___fullHeight {
+            height: 100%;
+        }
     }
 }

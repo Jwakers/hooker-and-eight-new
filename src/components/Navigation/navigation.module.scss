@@ -50,7 +50,7 @@
         &_item {
             position: relative;
             bottom: 10px;
-            color: $mainRed;
+            color: #fff;
             transition: opacity, bottom;
             transition-duration: 0.4s;
             opacity: 0;
@@ -61,6 +61,7 @@
             margin: rem(20) 0;
             cursor: pointer;
             @include atMedium {
+                color: $mainRed;
                 bottom: 0;
             }
             &:after {
@@ -72,7 +73,7 @@
                 width: 0;
                 height: 1px;
                 transition: 0.2s;
-                background-color: $mainRed;
+                background-color: #fff;
                 @include atMedium {
                     background-color: $mainRed;
                 }

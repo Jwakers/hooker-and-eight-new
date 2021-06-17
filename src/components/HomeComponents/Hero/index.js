@@ -53,9 +53,11 @@ export default function Hero() {
                                     Menu &amp; order
                                 </Button>
                             </span>
-                            <Link to="./find-us">
-                                <Button modifier="white">Find us</Button>
-                            </Link>
+                            <span data-glf-cuid="4fb0fb85-1362-4f6e-92b9-705b22814f18" data-glf-ruid="f7220aa7-9342-4482-a162-2664ecf3b30f" data-glf-reservation="true">
+                                <Button modifier="white">
+                                    Table reservation
+                                </Button>
+                            </span>
                         </ButtonGroup>
                     </div>
                 </div>
