@@ -1,15 +1,26 @@
 @import '../../styles/variables';
 @import '../../styles/functions';
+@import '../../styles/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&display=swap');
 html,
 body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
 }
 
 body {
+    position: relative;
     font-family: 'Poppins', sans-serif;
     color: $darkGrey;
+    &::after {
+        // Accommodate absolute positioned footer
+        content: '';
+        display: block;
+        height: rem(449);
+        @include atMedium {
+            height: rem(301);
+        }
+    }
 }
 
 * {

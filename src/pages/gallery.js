@@ -29,7 +29,7 @@ export default function Gallery({ path }) {
             />
             <div style={{textAlign: 'center', padding: '40px 20px'}}>
                 <h1>Gallery coming soon!</h1>
-                <p>In the mean time, we have plenty of photos on our social channels, <a href="https://www.instagram.com/hookerandeight/?hl=en" target="_blank">Instagram</a> and <a href="https://www.facebook.com/hookerandeight/" target="_blank">Facebook</a></p>
+                <p>In the mean time, we have plenty of photos on our social channels, <a href="https://www.instagram.com/hookerandeight/?hl=en" target="_blank" rel="noreferrer">Instagram</a> and <a href="https://www.facebook.com/hookerandeight/" target="_blank" rel="noreferrer">Facebook</a></p>
             </div>
         </div>
     )

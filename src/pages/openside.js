@@ -1,5 +1,6 @@
 import React from "react"
 import MetaInfo from "../components/MetaInfo"
+import Button from "../components/Button"
 import OpensideForm from "../components/OpensideForm"
 
 export default function About({ path }) {
@@ -68,6 +69,11 @@ export default function About({ path }) {
                     </p>
                 </div>
             </div>
+            <span data-glf-cuid="38c46deb-f0d2-424f-bde3-810d6d6951cc" data-glf-ruid="7cdaacdd-9070-4941-815f-d51e803528f9">
+                <Button>
+                    Openside menu and order
+                </Button>
+            </span>
 
             <OpensideForm />
         </div>

@@ -95,7 +95,7 @@ export default class OpensideForm extends React.Component {
                 body: JSON.stringify(values)
             })
             const data = await response.json()
-            if (data.error || data.errors || data.status == 400)
+            if (data.error || data.errors || data.status === 400)
                 throw new Error(data.errors[0].message)
             setSubmitting(false)
             resetForm()

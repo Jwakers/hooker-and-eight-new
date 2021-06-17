@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react"
-import { Link } from "gatsby"
 
 import * as style from "./hero.module.scss"
 

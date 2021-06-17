@@ -2,7 +2,9 @@
 @import "../../styles/functions";
 @import "../../styles/mixins";
 .Footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: $mainRed;
     color: #fff;
     padding: rem(20) 0;
