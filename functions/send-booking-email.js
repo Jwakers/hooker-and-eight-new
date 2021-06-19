@@ -12,7 +12,7 @@ const sendEmail = async data => {
         const mailData = {
             from:
                 "Openside <postmaster@sandbox04b2be504e6146f59a85f6df9182860f.mailgun.org>",
-            to: "jackwakeham82@gmail.com",
+            to: "jackwakeham82@gmail.com, opensidepizza@gmail.com",
             subject: "New booking request",
             text: `
                 New Openside Booking (${data.id})
