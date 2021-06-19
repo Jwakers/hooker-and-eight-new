@@ -24,9 +24,7 @@ export default function ReviewSection() {
                         <div className="grid__12 grid__md-6">
                             <h2>Don’t just take our word for it</h2>
                             <p>
-                                Sed eget consequat neque. Ut pulvinar tortor eget
-                                dolor fringilla, ac varius tellus luctus. Morbi sed
-                                dolor bibendum, accumsan odio in, posuere neque.
+                                We think our pizzas are some of the best around, but we dont expect you to take our word for it. Take a look at some of our reviews from trip advisor.
                             </p>
                             <Button>Find us on trip advisor</Button>
                         </div>
