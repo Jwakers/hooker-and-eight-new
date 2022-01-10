@@ -1,18 +1,20 @@
+// Used by a webhook in GraphCMS
+
 const Mailgun = require("mailgun-js")
 
 const sendEmail = async data => {
     return new Promise((resolve, reject) => {
         console.log("Sending email")
         const { MAILGUN_API_KEY: apiKey, MAILGUN_DOMAIN: domain } = process.env
-        console.log(apiKey, domain)
+        
         const mailgun = Mailgun({
             apiKey,
             domain,
         })
         const mailData = {
             from:
-                "Openside <postmaster@sandbox04b2be504e6146f59a85f6df9182860f.mailgun.org>",
-            to: "jackwakeham82@gmail.com, opensidepizza@gmail.com",
+                "Openside <mailgun@sandbox04b2be504e6146f59a85f6df9182860f.mailgun.org>",
+            to: "jackwakeham82@gmail.com",
             subject: "New booking request",
             text: `
                 New Openside Booking (${data.id})
@@ -32,16 +34,16 @@ const sendEmail = async data => {
                         <p style="font-size:20px;"><b>New Openside Booking (${
                             data.id
                         })</b></p>
-                        <p>Name: ${data.name}</p>
-                        <p>Email: ${data.email}</p>
-                        <p>Phone: ${data.phone}</p>
-                        <p>Address: ${data.address}</p>
-                        <p>Date of event: ${new Date(
+                        <p>Name: <b>${data.name}</b></p>
+                        <p>Email: <b>${data.email}</b></p>
+                        <p>Phone: <b>${data.phone}</b></p>
+                        <p>Address: <b>${data.address}</b></p>
+                        <p>Date of event: <b>${new Date(
                             data.dateOfEvent
-                        ).toLocaleDateString()}</p>
-                        <p>Type of event: ${data.typeOfEvent}</p>
-                        <p>Number of guests: ${data.numberOfGuests}</p>
-                        <p>Event address: ${data.eventAddress}</p>
+                        ).toLocaleDateString()}</b></p>
+                        <p>Type of event: <b>${data.typeOfEvent}</b></p>
+                        <p>Number of guests: <b>${data.numberOfGuests}</b></p>
+                        <p>Event address: <b>${data.eventAddress}</b></p>
                     </html>
                     `,
         }
