@@ -4,7 +4,7 @@ import * as style from "./review-section.module.scss"
 
 import Button from "../../Button"
 import Box from "../../Box"
-import AnimateOnScroll from "../../AnimateOnScroll"
+import AnimateOnScroll from "../../../hocs/AnimateOnScroll"
 
 const ReviewSection = () => (
     <>
